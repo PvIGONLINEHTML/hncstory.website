@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>顏色彈跳球 #hnc.story</title>
+  <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>顏色彈跳球 : hnc.story</title>
+
+<link href="hnc.story.e6722d3a4.min.css" rel="stylesheet" type="text/css"/>
+<link href="images/icon.hnc.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="images/icon.hnc.png" rel="apple-touch-icon"/>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="navbar-no-logo wf-section">
+            <div class="sticky-primary-button-holder">
+            </div>
+            <div data-animation="default" data-collapse="tiny" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
+                <div class="navbar-wrapper">
+                    <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+                        <div class="nav-menu">
+                            <a href="index.html" class="brand w-nav-brand">
+                                <img src="images/logo.hnc.png" loading="lazy" width="50" height="Auto" alt="" class="logo"/>
+                            </a>
+                            <ul role="list" class="nav-menu-block w-list-unstyled">
+                                <li class="list-item">
+                                    <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                        <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                            <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                            <div>Menu</div>
+                                        </div>
+                                        <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                            <a href="index.html" class="nav-dropdown-link w-dropdown-link">主頁 | Homepage</a>
+                                            <a href="news.html" class="nav-dropdown-link w-dropdown-link">最新消息 | LatestNews</a>
+                                            <a href="mm.post_1.html" class="nav-dropdown-link w-dropdown-link">最新帖子 | LatestPosts</a>
+                                            <a href="colourballs.html" class="nav-dropdown-link w-dropdown-link">顏色彈跳球 | ColourBalls</a>
+                                        </nav>
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="menu-button w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="splash"></div>
+<div class="container">
+            <div class="start-game game-full-flex" id="start-game">
+                <div class="start-game-top"><a class="play-full-page" href="#"  target="_blank">全頁模式</a></div>  
+                <div class="logo-holder">
+                    <p class="logo">
+                        <span>顏</span>
+                        <span>色</span>
+                        <span>彈</span>
+                        <span>跳</span>
+                        <span>球</span>
+                    </p>
+                    <a class="play-button" href="#" onclick="game.start()">開始遊戲</a>
+                    <h4 class="hint">提示 : <span>紅</span>色永遠是先來</h4>
+                </div>
+
+                <div class="how-to-play">
+                    <div class="section section-1">
+                        <h4>彈跳球<br>改變顏色</h4>
+                        <div class="content">
+                            <div class="ball-demo" id="ball-demo"></div>
+                        </div>
+                    </div>
+                    <div class="section section-2">
+                        <h4>點擊條柵以切換顏色<br>（紅 > 黃 > 紫）</h4>
+                        <div class="content">
+                            <div class="bar bar-1" data-index="0"></div>
+                            <div class="bar bar-2"></div>
+                            <div class="bar bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="section section-3">
+                        <h4>你需要匹配彈跳球和條形的顏色</h4>
+                        <div class="content">
+                            <div class="ball-demo" id="ball-demo"></div>
+                            <div class="bar bar-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stop-game game-full-flex">
+
+                <div class="score-container">
+
+                    <h1>顏色彈跳球</h1>
+
+                    <div class="final-score"></div>
+                    <div class="result"></div>
+
+                    <h4>分享至 Instagram 和朋友一起挑戰</h4>
+
+                    <div>
+                        <a class="play-again" href="#" onclick="game.start()">再玩一遍</a>
+                        <a class="main-menu" href="#" onclick="game.intro()">菜單</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="small-glows"></div>
+
+            <div class="glow"><div class="sun"></div></div>
+
+            <div class="waves">
+                <div class="top_wave"></div>
+                <div class="wave1"></div>
+                <div class="wave2"></div>
+                <div class="wave3"></div>
+                <div class="wave4"></div>
+            </div>
+
+            <div class="mounts">
+                <div class="mount1"></div>
+                <div class="mount2"></div>
+            </div>
+
+            <div class="clouds"></div>
+
+            <div class="scene">
+                <div class="learn-to-play">點擊條柵改變顏色！</div>
+                <div class="score" id="score"></div>
+                <div class="ball-holder"></div>
+                <div class="sticks" id="sticks"></div>
+            </div>
+
+            <div class="noise"></div>
+
+        </div>
+  <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script><script  src="./script.js"></script>
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63aaff71c90d97f9e4ddb95a" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://uploads-ssl.webflow.com/63aaff71c90d97f9e4ddb95a/js/webflow.d777fbb36.js" type="text/javascript"></script>
+
+</body>
+</html>
