@@ -93,50 +93,7 @@
                     <div class="style-label element-note">#095</div> <div class="style-label">匿名投稿</div>
                     <h1>屌人台 💢</h1>
                     <h2s>8. 2023/June</h2s>
-                    <p><br>from selenium import webdriver from selenium.webdriver.common.keys import Keys from selenium.webdriver.support.ui import WebDriverWait from selenium.webdriver.support import expected_conditions as EC from selenium.webdriver.common.by import By from bs4 import BeautifulSoup import time import threading
-SolidMemory账户信息
-USERNAME = "your_username" PASSWORD = "your_password"
-创建浏览器对象
-options = webdriver.ChromeOptions() options.add_argument('headless') # 无界面形式 options.add_argument('disable-gpu') # 禁用gpu options.add_argument('no-sandbox') # 取消沙箱模式 driver = webdriver.Chrome(options=options) driver.maximize_window()
-打开SolidMemory登录页面
-try: driver.get("https://www.solidmemory.com/login") except: print("打开SolidMemory登录页面失败!")
-输入账户信息并登录
-try: username_field = driver.find_element_by_name("username") password_field = driver.find_element_by_name("password") username_field.send_keys(USERNAME) password_field.send_keys(PASSWORD) password_field.submit() except: print("输入账户信息并登录失败!")
-等待页面加载完成
-try: WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "dashboard"))) except: print("等待页面加载失败!")
-获取学习计划列表
-try: soup = BeautifulSoup(driver.page_source, "html.parser") plan_list = soup.select(".dashboard .plan-list li") except: print("获取学习计划列表失败!")
-定义抓取单词列表的函数
-def get_word_list(plan): # 点击学习计划 try: plan.click() except: print("点击学习计划失败!") return
-# 等待页面加载完成
-try:
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "plan-detail")))
-except:
-    print("等待页面加载失败!")
-    return
-
-# 获取单词列表
-try:
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    word_list = soup.select(".plan-detail .word")
-except:
-    print("获取单词列表失败!")
-    return
-
-# 整理单词本
-try:
-    with open(f"{plan.text.strip()}.txt", "w", encoding="utf-8") as f:
-        for word in word_list:
-            f.write(word.text.strip() + "\n")
-except:
-    print("整理单词本失败!")
-    return
-创建线程抓取每个学习计划的单词列表
-threads = [] for plan in plan_list: t = threading.Thread(target=get_word_list, args=(plan,)) threads.append(t) t.start()
-等待所有线程结束
-for t in threads: t.join()
-关闭浏览器
-driver.quit()</br></p>
+                    <p><br>fromseleniumimportwebdriverfromselenium.webdriver.common.keysimportKeysfromselenium.webdriver.support.uiimportWebDriverWaitfromselenium.webdriver.supportimportexpected_conditionsasECfromselenium.webdriver.common.byimportByfrombs4importBeautifulSoupimporttimeimportthreadingSolidMemory账户信息USERNAME="your_username"PASSWORD="your_password"创建浏览器对象options=webdriver.ChromeOptions()options.add_argument('headless')#无界面形式options.add_argument('disable-gpu')#禁用gpuoptions.add_argument('no-sandbox')#取消沙箱模式driver=webdriver.Chrome(options=options)driver.maximize_window()打开SolidMemory登录页面try:driver.get("https://www.solidmemory.com/login")except:print("打开SolidMemory登录页面失败!")输入账户信息并登录try:username_field=driver.find_element_by_name("username")password_field=driver.find_element_by_name("password")username_field.send_keys(USERNAME)password_field.send_keys(PASSWORD)password_field.submit()except:print("输入账户信息并登录失败!")等待页面加载完成try:WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME,"dashboard")))except:print("等待页面加载失败!")获取学习计划列表try:soup=BeautifulSoup(driver.page_source,"html.parser")plan_list=soup.select(".dashboard.plan-listli")except:print("获取学习计划列表失败!")定义抓取单词列表的函数defget_word_list(plan):#点击学习计划try:plan.click()except:print("点击学习计划失败!")return#等待页面加载完成try:WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME,"plan-detail")))except:print("等待页面加载失败!")return#获取单词列表try:soup=BeautifulSoup(driver.page_source,"html.parser")word_list=soup.select(".plan-detail.word")except:print("获取单词列表失败!")return#整理单词本try:withopen(f"{plan.text.strip()}.txt","w",encoding="utf-8")asf:forwordinword_list:f.write(word.text.strip()+"\n")except:print("整理单词本失败!")return创建线程抓取每个学习计划的单词列表threads=[]forplaninplan_list:t=threading.Thread(target=get_word_list,args=(plan,))threads.append(t)t.start()等待所有线程结束fortinthreads:t.join()关闭浏览器driver.quit()</br></p>
                 </div>
                 <div id="w-node-fbf62038-71e8-859a-64ac-34908a982a7b-36c4dd51" class="style-holder">
                     <div class="style-label element-note">#094</div> <div class="style-label">匿名投稿</div>
